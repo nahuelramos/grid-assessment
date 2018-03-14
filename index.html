@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="node_modules/datatables.net/datatable.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Grid project</title>
+
+    <!-- VENDORS -->
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+
+    <!-- OWN SCRITPS -->
+    <!-- <script src="js/service-caller.js"></script>
+    <script src="js/grid.controller.js"></script> -->
+    <script src="js/bundle.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            Grid Project!
+        </h1>
+    </header>
+
+    <main>
+        <section class="section-form">
+            <form action="submit" class="form">
+                <div class="form__group">
+                    <label for="startDate" class="form__label">Fecha de inicio</label>
+                    <input id="startDate" type="date" class="form__input">
+                </div>
+                <div class="form__group">
+                    <label for="endDate" class="form__label">Fecha de fin</label>
+                    <input id="endDate" type="date" class="form__input">
+                </div>
+                <input class="btn btn--blue" type="submit" id="submitForm" value="Send" />
+            </form>
+        </section>
+        <section class="section-grid">
+            <table id="grid" class="table table-striped table-bordered dt-responsive nowrap"></table>
+            <!-- </div> -->
+        </section>
+        <div id="wait" class="load">
+            <div class="load__spinner">
+                <img class="load__spinner-img" src='img/spinner2.gif'/>
+            </div>
+        </div>        
+    </main>
+</body>
+</html>
